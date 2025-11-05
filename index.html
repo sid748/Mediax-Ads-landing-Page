@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Slick Slider -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Aos css -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="/index">
+        <img src="images/logo.gif" alt="" style="height: 30px;">
+      </a>
+    </div>
+    <nav class="nav-links d-none d-md-flex">
+      <a href="#">About Us</a>
+      <a href="#">Work</a>
+      <a href="#">Expertise</a>
+      <a href="#">Testimonials</a>
+    </nav>
+    <button class="contact-btn">Contact Us</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero overflow-hidden">
+    <canvas id="gridCanvas"></canvas>
+    <div class="hero-content">
+      <div class="badge">Available for new projects</div>
+      <h1 data-aos="fade-up" data-aos-duration="2000">
+        An Integrated<br>
+        <span data-aos="fade-up" data-aos-duration="2000">Communication Agency</span>
+      </h1>
+      <p>
+        With a perfect balance of artistry and analytical insight, we craft brand identities that tell
+        compelling<br>stories.Our goal is to make your brand unforgettable and strategically sound.
+      </p>
+      <button class="btn-talk">Let's Talk <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </section>
+
+
+  <!-- product highlight section -->
+  <section class="highlight-section">
+    <div class="container-fluid m-auto">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-12 col-md-4 highlight-col p-0">
+          <img src="images/image1.png" alt="Product Highlight 1" class="highlight-img w-100"
+            style="object-position: left;">
+        </div>
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4 highlight-col p-0">
+          <img src="images/image2.png" alt="Product Highlight 2" class="highlight-img w-100"
+            style="object-position: center;">
+        </div>
+        <!-- Column 3 -->
+        <div class="col-12 col-md-4 highlight-col p-0">
+          <img src="images/image3.png" alt="Product Highlight 3" class="highlight-img w-100"
+            style="object-position: right;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- counter section starts here -->
+  <section class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left text -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+          <h2 class="about-heading">
+            we are a dynamic team of<br>
+            advertising professionals<br>
+            passionate about staying<br>
+            ahead of the curve.
+          </h2>
+        </div>
+
+        <!-- Right content -->
+        <div class="col-lg-6 col-md-12">
+          <p class="about-text mb-5">
+            Our expertise in crafting innovative strategies ensures impactful results for our clients.
+            Collaborating with companies globally, we tailor bespoke plans designed to drive business growth
+            and success.
+          </p>
+
+          <div class="row text-center text-lg-start stats">
+            <div class="col-4">
+              <h3 class="counter" data-target="100">0</h3><span class="plus">+</span>
+              <p>Clients</p>
+            </div>
+            <div class="col-4">
+              <h3 class="counter" data-target="200">0</h3><span class="plus">+</span>
+              <p>Finished project</p>
+            </div>
+            <div class="col-4">
+              <h3 class="counter" data-target="20">0</h3><span class="plus">+</span>
+              <p>Experts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-section">
+    <div class="container">
+      <h4>Trusted by</h4>
+      <div class="trusted-slider">
+        <div><img src="images/logo-1.png" alt="Crimson"></div>
+        <div><img src="images/logo-2.png" alt="School"></div>
+        <div><img src="images/logo-3.png" alt="Meaty Story"></div>
+        <div><img src="images/logo-4.png" alt="Indusmela"></div>
+        <div><img src="images/logo-5.png" alt="Logo 5"></div>
+        <div><img src="images/logo-1.png" alt="Crimson"></div>
+        <div><img src="images/logo-2.png" alt="School"></div>
+        <div><img src="images/logo-3.png" alt="Meaty Story"></div>
+        <div><img src="images/logo-4.png" alt="Indusmela"></div>
+        <div><img src="images/logo-5.png" alt="Logo 5"></div>
+        <div><img src="images/logo-1.png" alt="Crimson"></div>
+        <div><img src="images/logo-2.png" alt="School"></div>
+        <div><img src="images/logo-3.png" alt="Meaty Story"></div>
+        <div><img src="images/logo-4.png" alt="Indusmela"></div>
+        <div><img src="images/logo-5.png" alt="Logo 5"></div>
+        <div><img src="images/logo-1.png" alt="Crimson"></div>
+        <div><img src="images/logo-2.png" alt="School"></div>
+        <div><img src="images/logo-3.png" alt="Meaty Story"></div>
+        <div><img src="images/logo-4.png" alt="Indusmela"></div>
+        <div><img src="images/logo-5.png" alt="Logo 5"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Our Newest creation -->
+  <section class="our-products py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title-creation fw-bold">Check Out Our Newest <br> Creation and See What’s Fresh</h2>
+        <p class="section-subtitle-creation">Discover cutting-edge projects, designs and innovative solutions, crafted to inspire
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="product-card">
+            <img src="images/creation-1.png" alt="Chow’s Kitchen">
+            <div class="card-overlay">
+              <h5>Chow’s Kitchen</h5>
+              <!-- <i class="fa-solid fa-arrow-up-right"></i> -->
+              <i class="bi bi-arrow-up-right"></i>
+              <span class="badge">FnB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="product-card">
+            <img src="images/creation-2.png" alt="Steamos">
+            <div class="card-overlay">
+              <h5>Steamos</h5>
+              <!-- <i class="fa-solid fa-arrow-up-right"></i> -->
+              <i class="bi bi-arrow-up-right"></i>
+              <span class="badge">FnB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4 mx-md-auto mx-lg-0">
+          <div class="product-card">
+            <img src="images/creation-3.png" alt="Spanish with Mrityunjay">
+            <div class="card-overlay">
+              <h5>Spanish with Mrityunjay</h5>
+              <!-- <i class="fa-solid fa-arrow-up-right"></i> -->
+              <i class="bi bi-arrow-up-right"></i>
+              <span class="badge">Education</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================Behind the scene section starts here======================= -->
+   <div class="hero-behind text-start container">
+    <div class=" hero-behind-section">
+      <h1>Behind the Scenes</h1>
+      <p class="lead">Navigate through our versatile range of services and discover how we can empower you</p>
+    </div>
+ 
+
+  <div class="timeline-wrap">
+    <!-- absolute vertical lines and dots -->
+    <div class="timeline-lines">
+      <div class="timeline-line line-1"></div>
+      <div class="timeline-line line-2"></div>
+      <div class="timeline-line line-3"></div>
+      <div class="timeline-line line-4"></div>
+    </div>
+
+    <!-- steps (flex row on large) -->
+    <div class="container">
+      <div class="steps">
+        <div class="step phase-center">
+          <span class="phase-badge">Phase 01</span>
+          <h3>Discovery Phase</h3>
+          <p class="desc">Initial Client Meeting and Needs Assessment</p>
+        </div>
+
+        <div class="step phase-center">
+          <span class="phase-badge">Phase 02</span>
+          <h3>Strategy Development</h3>
+          <p class="desc">Initial Client Meeting and Needs Assessment</p>
+        </div>
+
+        <div class="step phase-center">
+          <span class="phase-badge">Phase 03</span>
+          <h3>Design and Creation</h3>
+          <p class="desc">Initial Client Meeting and Needs Assessment</p>
+        </div>
+
+        <div class="step phase-center">
+          <span class="phase-badge">Phase 04</span>
+          <h3>Implementation</h3>
+          <p class="desc">Initial Client Meeting and Needs Assessment</p>
+        </div>
+
+        <div class="step phase-center">
+          <span class="phase-badge">Phase 05</span>
+          <h3>Evaluation and Refinement</h3>
+          <p class="desc">Initial Client Meeting and Needs Assessment</p>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ===============Our services section starts here============================= -->
+ <!-- Our Services Section -->
+<section class="services-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title-services">Experience the Depth and<br>Breadth of Our Service Offerings</h2>
+      <p class="section-subtitle-services">
+        Navigate through our versatile range of services and discover how we can empower you
+      </p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="service-card">
+          <div class="side-title bg-red">Brand Guidelines</div>
+          <div class="service-content">
+            <h5>Services:</h5>
+            <ul>
+              <li>Logo Design</li>
+              <li>Color Palette</li>
+              <li>Typography</li>
+              <li>Iconography</li>
+            </ul>
+            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="service-card">
+          <div class="side-title">Content Creation</div>
+          <div class="service-content">
+            <h5>Services:</h5>
+            <ul>
+              <li>Social Media Content</li>
+              <li>Multimedia Content</li>
+              <li>Content Management</li>
+              <li>E-books</li>
+            </ul>
+            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="service-card">
+          <div class="side-title">Social Media Branding</div>
+          <div class="service-content">
+            <h5>Services:</h5>
+            <ul>
+              <li>Profile Setup</li>
+              <li>Brand Identity</li>
+              <li>Community Engagement</li>
+              <li>Influencer Partnerships</li>
+            </ul>
+            <div class="arrow-btn" style="color: rgba(226, 39, 38, 1);"><i class="bi bi-arrow-down-right"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="service-card">
+          <div class="side-title">Website Design</div>
+          <div class="service-content">
+            <h5>Services:</h5>
+            <ul>
+              <li>UI/UX Design</li>
+              <li>Responsive Design</li>
+              <li>CMS Integration</li>
+              <li>Custom Features</li>
+            </ul>
+            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ========================videos testimonial section starts here=================================== -->
+   <section class="video-testimonial-section py-5">
+  <div class="container-fluid">
+    <h2 class="section-title-testimonial text-center mb-5">
+      Testimonials From <br> Our Valued Clients
+    </h2>
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Testimonial 1 -->
+      <div class="col-md-4 col-sm-12 p-0">
+        <div class="testimonial-card">
+          <div class="video-wrapper">
+            <video class="testimonial-video" poster="images/poster1.jpg">
+              <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn" onclick="togglePlay(this)">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div class="client-info">
+            <h5>Sarthak Bhaiya</h5>
+            <p>Founder - Granotone</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4 col-sm-12 p-0">
+        <div class="testimonial-card">
+          <div class="video-wrapper">
+            <video class="testimonial-video" poster="images/poster2.jpg">
+              <source src="images/WhatsApp Video 2025-09-15 at 11.27.20 PM.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn" onclick="togglePlay(this)">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div class="client-info">
+            <h5>Sachein Ji</h5>
+            <p>CEO - Indusmela</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4 col-sm-12 p-0">
+        <div class="testimonial-card">
+          <div class="video-wrapper">
+            <video class="testimonial-video" poster="images/poster3.jpg">
+              <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn" onclick="togglePlay(this)">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div class="client-info">
+            <h5>Rohit Sharma</h5>
+            <p>Director - Rainbow IVF</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ==================================Footer section starts here============================= -->
+  <footer id="footer">
+    <div class="container-xxl">
+      <div class="foot-line"></div>
+      <div class="foot-logo">
+        <a href="/index">
+          <img src="images/logo.gif" alt="" class="w-100">
+        </a>
+
+      </div>
+      <div class="foot-partner">
+        <a href="/connect" class="">
+          <div class="d-flex gap-3 align-items-center">
+            <h2>Start a Partnership</h2>
+            <img src="images/main-arrow.webp" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="foot-link">
+        <div class="d-flex align-items-center gap-3 gap-md-5  justify-content-md-between flex-wrap">
+          <div class="">
+            <a class="" href="/index">
+              <p class="m-0">Home</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/about-us">
+              <p class="m-0">About Us</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/project">
+              <p class="m-0">Projects</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/solutions">
+              <p class="m-0">Solutions</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/connect">
+              <p class="m-0">Connect</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/careers">
+              <p class="m-0">Careers</p>
+            </a>
+          </div>
+          <div class="">
+            <a class="" href="/newsroom">
+              <p class="m-0">Newsroom</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-line"></div>
+
+      <div class="foot-social">
+        <div class="row gap-3 p-0 m-0">
+          <div class="col-md-4 p-0">
+            <p>Socials</p>
+            <div class="row p-0 m-0">
+              <div class="col-6 p-0 mb-2">
+                <a href="https://www.instagram.com/mediaxindia/" target="_blank">INSTAGRAM</a>
+              </div>
+              <div class="col-6 p-0 mb-2">
+                <a href="https://www.linkedin.com/company/mediaxindia/" target="_blank">LINKEDIN</a>
+              </div>
+              <div class="col-6 p-0">
+                <a href="https://www.behance.net/mediaxindia" target="_blank">BEHANCE</a>
+              </div>
+              <div class="col-6 p-0">
+                <a href="https://www.facebook.com/mediaxindia/" target="_blank">FACEBOOK</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-0">
+            <div class="">
+              <p class="">Industries</p>
+              <div class="col-md-4 p-0">
+                <div class="row p-0 m-0">
+                  <div class="col-6 p-0">
+                    <a class="" href="/industry-education/index" target="_blank">EDUCATION</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot-loc">
+        <p>Based in <a href="https://maps.app.goo.gl/UZ3y3o2ETJM94J166" class="text-decoration-underline"
+            target="_blank">Delhi</a> & <a href="https://maps.app.goo.gl/EhiojTxJ1F1xrzHF8"
+            class="text-decoration-underline" target="_blank">Agra</a></p>
+      </div>
+      <div class="foot-line"></div>
+      <div class="foot-contact">
+        <div class="row p-0 m-0">
+          <div class="col-md-6 col-xl-4 mt-4 p-0">
+            <div class="fc-h">Become Our Client</div>
+            <div class="fc-box">
+              <div class="fc-link">
+                <a href="mailto:hello@mediax.co.in" class="d-block">hello@mediax.co.in</a>
+              </div>
+              <div class="fc-line"></div>
+              <div class="fc-link">
+                <a href="tel:+919760273375" class="d-block">+919760273375</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 mt-4 p-0">
+            <div class="fc-h">Join Our Team</div>
+            <div class="fc-box">
+              <div class="fc-link">
+                <a href="mailto:careers@mediax.co.in" class="d-block">careers@mediax.co.in</a>
+              </div>
+              <!-- <div class="fc-line"></div>
+                    <div class="fc-link">
+                        <a href="tel:+919760517017" class="d-block">+919760517017</a>
+                    </div> -->
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 mt-4 p-0">
+            <div class="fc-h">Media Enquiries</div>
+            <div class="fc-box">
+              <div class="fc-link">
+                <a href="mailto:vanshika.bhatia@mediax.co.in" class="d-block">vanshika.bhatia@mediax.co.in</a>
+              </div>
+              <!-- <div class="fc-line"></div>
+                    <div class="fc-link">
+                        <a href="tel:+919760517017" class="d-block">+919760517017</a>
+                    </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Aos js -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script>
+  AOS.init();
+</script>
+
+  <!-- slick slider scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- Bootstrap js link here -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/0db0bdec09.js" crossorigin="anonymous"></script>
+  <!-- Js File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
+     
+
+
+
