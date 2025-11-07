@@ -13,8 +13,21 @@
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="style.css">
 
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <!-- Aos css -->
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- odometer -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+
+
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -22,25 +35,54 @@
 
 <body>
   <!-- Header -->
-  <header>
+  <!-- ====== HEADER ====== -->
+  <header class="custom-header">
     <div class="logo">
       <a href="/index">
-        <img src="images/logo.gif" alt="" style="height: 30px;">
+        <img src="images/logo.gif" alt="Showluxe" style="height: 30px;">
       </a>
     </div>
+
+    <!-- Desktop Nav -->
     <nav class="nav-links d-none d-md-flex">
       <a href="#">About Us</a>
       <a href="#">Work</a>
       <a href="#">Expertise</a>
       <a href="#">Testimonials</a>
     </nav>
-    <button class="contact-btn">Contact Us</button>
+
+    <button class="contact-btn d-none d-md-block">Contact Us</button>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle d-md-none d-flex">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <a href="/index"><img src="images/logo.gif" alt="Showluxe" style="height: 30px;"></a>
+        </div>
+        <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="#">About Us</a>
+        <a href="#">Work</a>
+        <a href="#">Expertise</a>
+        <a href="#">Testimonials</a>
+        <a href="#" class="mobile-contact-btn">Contact Us</a>
+      </nav>
+    </div>
   </header>
+
 
   <!-- Hero Section -->
   <section class="hero overflow-hidden">
     <canvas id="gridCanvas"></canvas>
-    <div class="hero-content">
+    <div class="hero-content ">
       <div class="badge">Available for new projects</div>
       <h1 data-aos="fade-up" data-aos-duration="2000">
         An Integrated<br>
@@ -58,9 +100,9 @@
   <!-- product highlight section -->
   <section class="highlight-section">
     <div class="container-fluid m-auto">
-      <div class="row">
+      <div class="row ">
         <!-- Column 1 -->
-        <div class="col-12 col-md-4 highlight-col p-0">
+        <div class="col-12 col-md-4 highlight-col p-0 ">
           <img src="images/image1.png" alt="Product Highlight 1" class="highlight-img w-100"
             style="object-position: left;">
         </div>
@@ -154,7 +196,8 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title-creation fw-bold">Check Out Our Newest <br> Creation and See What’s Fresh</h2>
-        <p class="section-subtitle-creation">Discover cutting-edge projects, designs and innovative solutions, crafted to inspire
+        <p class="section-subtitle-creation">Discover cutting-edge projects, designs and innovative solutions, crafted
+          to inspire
         </p>
       </div>
 
@@ -203,24 +246,23 @@
 
 
   <!-- ===========================Behind the scene section starts here======================= -->
-   <div class="hero-behind text-start container">
+  <div class="hero-behind text-start container mx-auto">
     <div class=" hero-behind-section">
       <h1>Behind the Scenes</h1>
       <p class="lead">Navigate through our versatile range of services and discover how we can empower you</p>
     </div>
- 
 
-  <div class="timeline-wrap">
-    <!-- absolute vertical lines and dots -->
-    <div class="timeline-lines">
-      <div class="timeline-line line-1"></div>
-      <div class="timeline-line line-2"></div>
-      <div class="timeline-line line-3"></div>
-      <div class="timeline-line line-4"></div>
-    </div>
 
-    <!-- steps (flex row on large) -->
-    <div class="container">
+    <div class="timeline-wrap">
+      <!-- absolute vertical lines and dots -->
+      <div class="timeline-lines">
+        <div class="timeline-line line-1"></div>
+        <div class="timeline-line line-2"></div>
+        <div class="timeline-line line-3"></div>
+        <div class="timeline-line line-4"></div>
+      </div>
+
+      <!-- steps (flex row on large) -->
       <div class="steps">
         <div class="step phase-center">
           <span class="phase-badge">Phase 01</span>
@@ -248,166 +290,166 @@
 
         <div class="step phase-center">
           <span class="phase-badge">Phase 05</span>
-          <h3>Evaluation and Refinement</h3>
+          <h3 class="differ">Evaluation<br>and<br>Refinement</h3>
           <p class="desc">Initial Client Meeting and Needs Assessment</p>
         </div>
 
       </div>
-      </div>
     </div>
   </div>
 
 
-<!-- ===============Our services section starts here============================= -->
- <!-- Our Services Section -->
-<section class="services-section py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title-services">Experience the Depth and<br>Breadth of Our Service Offerings</h2>
-      <p class="section-subtitle-services">
-        Navigate through our versatile range of services and discover how we can empower you
-      </p>
+  <!-- ===============Our services section starts here============================= -->
+  <!-- Our Services Section -->
+  <section class="services-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title-services">Experience the Depth and <br>Breadth of Our Service Offerings</h2>
+        <p class="section-subtitle-services">
+          Navigate through our versatile range of services and discover how we can empower you
+        </p>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="service-card">
+            <div class="side-title bg-red">Brand Guidelines</div>
+            <div class="service-content">
+              <h5>Services:</h5>
+              <ul>
+                <li>Logo Design</li>
+                <li>Color Palette</li>
+                <li>Typography</li>
+                <li>Iconography</li>
+              </ul>
+              <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="service-card">
+            <div class="side-title">Content Creation</div>
+            <div class="service-content">
+              <h5>Services:</h5>
+              <ul>
+                <li>Social Media Content</li>
+                <li>Multimedia Content</li>
+                <li>Content Management</li>
+                <li>E-books</li>
+              </ul>
+              <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="service-card">
+            <div class="side-title">Social Media Branding</div>
+            <div class="service-content">
+              <h5>Services:</h5>
+              <ul>
+                <li>Profile Setup</li>
+                <li>Brand Identity</li>
+                <li>Community Engagement</li>
+                <li>Influencer Partnerships</li>
+              </ul>
+              <div class="arrow-btn" style="color: rgba(226, 39, 38, 1);"><i class="bi bi-arrow-down-right"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="service-card">
+            <div class="side-title">Website Design</div>
+            <div class="service-content">
+              <h5>Services:</h5>
+              <ul>
+                <li>UI/UX Design</li>
+                <li>Responsive Design</li>
+                <li>CMS Integration</li>
+                <li>Custom Features</li>
+              </ul>
+              <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="row justify-content-center g-4">
-      <!-- Card 1 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="service-card">
-          <div class="side-title bg-red">Brand Guidelines</div>
-          <div class="service-content">
-            <h5>Services:</h5>
-            <ul>
-              <li>Logo Design</li>
-              <li>Color Palette</li>
-              <li>Typography</li>
-              <li>Iconography</li>
-            </ul>
-            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="service-card">
-          <div class="side-title">Content Creation</div>
-          <div class="service-content">
-            <h5>Services:</h5>
-            <ul>
-              <li>Social Media Content</li>
-              <li>Multimedia Content</li>
-              <li>Content Management</li>
-              <li>E-books</li>
-            </ul>
-            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="service-card">
-          <div class="side-title">Social Media Branding</div>
-          <div class="service-content">
-            <h5>Services:</h5>
-            <ul>
-              <li>Profile Setup</li>
-              <li>Brand Identity</li>
-              <li>Community Engagement</li>
-              <li>Influencer Partnerships</li>
-            </ul>
-            <div class="arrow-btn" style="color: rgba(226, 39, 38, 1);"><i class="bi bi-arrow-down-right"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="service-card">
-          <div class="side-title">Website Design</div>
-          <div class="service-content">
-            <h5>Services:</h5>
-            <ul>
-              <li>UI/UX Design</li>
-              <li>Responsive Design</li>
-              <li>CMS Integration</li>
-              <li>Custom Features</li>
-            </ul>
-            <div class="arrow-btn"><i class="bi bi-arrow-down-right"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
   <!-- ========================videos testimonial section starts here=================================== -->
-   <section class="video-testimonial-section py-5">
-  <div class="container-fluid">
-    <h2 class="section-title-testimonial text-center mb-5">
-      Testimonials From <br> Our Valued Clients
-    </h2>
-    <div class="row g-4 justify-content-center">
-      
-      <!-- Testimonial 1 -->
-      <div class="col-md-4 col-sm-12 p-0">
-        <div class="testimonial-card">
-          <div class="video-wrapper">
-            <video class="testimonial-video" poster="images/poster1.jpg">
-              <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
-            </video>
-            <div class="play-btn" onclick="togglePlay(this)">
-              <i class="fa-solid fa-play"></i>
+  <section class="video-testimonial-section py-5">
+    <div class="container-fluid">
+      <h2 class="section-title-testimonial text-center mb-5">
+        Testimonials From <br> Our Valued Clients
+      </h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Testimonial 1 -->
+        <div class="col-md-4 col-sm-12 p-0">
+          <div class="testimonial-card">
+            <div class="video-wrapper">
+              <video class="testimonial-video" poster="images/poster1.jpg">
+                <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
+              </video>
+              <div class="play-btn" onclick="togglePlay(this)">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="client-info">
+              <h5>Sarthak Bhaiya</h5>
+              <p>Founder - Granotone</p>
             </div>
           </div>
-          <div class="client-info">
-            <h5>Sarthak Bhaiya</h5>
-            <p>Founder - Granotone</p>
-          </div>
         </div>
-      </div>
 
-      <!-- Testimonial 2 -->
-      <div class="col-md-4 col-sm-12 p-0">
-        <div class="testimonial-card">
-          <div class="video-wrapper">
-            <video class="testimonial-video" poster="images/poster2.jpg">
-              <source src="images/WhatsApp Video 2025-09-15 at 11.27.20 PM.mp4" type="video/mp4">
-            </video>
-            <div class="play-btn" onclick="togglePlay(this)">
-              <i class="fa-solid fa-play"></i>
+        <!-- Testimonial 2 -->
+        <div class="col-md-4 col-sm-12 p-0">
+          <div class="testimonial-card">
+            <div class="video-wrapper">
+              <video class="testimonial-video" poster="images/poster2.jpg">
+                <source src="images/WhatsApp Video 2025-09-15 at 11.27.20 PM.mp4" type="video/mp4">
+              </video>
+              <div class="play-btn" onclick="togglePlay(this)">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="client-info">
+              <h5>Sachein Ji</h5>
+              <p>CEO - Indusmela</p>
             </div>
           </div>
-          <div class="client-info">
-            <h5>Sachein Ji</h5>
-            <p>CEO - Indusmela</p>
-          </div>
         </div>
-      </div>
 
-      <!-- Testimonial 3 -->
-      <div class="col-md-4 col-sm-12 p-0">
-        <div class="testimonial-card">
-          <div class="video-wrapper">
-            <video class="testimonial-video" poster="images/poster3.jpg">
-              <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
-            </video>
-            <div class="play-btn" onclick="togglePlay(this)">
-              <i class="fa-solid fa-play"></i>
+        <!-- Testimonial 3 -->
+        <div class="col-md-4 col-sm-12 p-0">
+          <div class="testimonial-card">
+            <div class="video-wrapper">
+              <video class="testimonial-video" poster="images/poster3.jpg">
+                <source src="images/WhatsApp Video 2025-09-16 at 7.59.30 PM.mp4" type="video/mp4">
+              </video>
+              <div class="play-btn" onclick="togglePlay(this)">
+                <i class="fa-solid fa-play"></i>
+              </div>
+
+              <div class="client-info">
+                <h5>Rohit Sharma</h5>
+                <p>Director - Rainbow IVF</p>
+              </div>
             </div>
           </div>
-          <div class="client-info">
-            <h5>Rohit Sharma</h5>
-            <p>Director - Rainbow IVF</p>
-          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -554,19 +596,25 @@
   </footer>
 
   <!-- Aos js -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-   <script>
-  AOS.init();
-</script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- slick slider scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- ====== GSAP + Script ====== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
   <!-- Bootstrap js link here -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <!-- odometer js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/0db0bdec09.js" crossorigin="anonymous"></script>
@@ -575,7 +623,3 @@
 </body>
 
 </html>
-     
-
-
-

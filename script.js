@@ -70,47 +70,31 @@ function drawGrid() {
 drawGrid();
 
 
-// counter section code here
-// Smooth Counter Animation (Ease-Out)
-const counters = document.querySelectorAll(".counter");
+document.querySelectorAll(".counter").forEach((el) => {
 
-const animateCounter = (counter) => {
-  const target = +counter.getAttribute("data-target");
-  const duration = 2000; // total animation time (ms)
-  const start = 0;
-  const startTime = performance.now();
+  const finalValue = +el.getAttribute("data-target");
 
-  const update = (currentTime) => {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    // Ease-out cubic
-    const easeOut = 1 - Math.pow(1 - progress, 3);
-
-    const current = Math.floor(start + easeOut * (target - start));
-    counter.innerText = current;
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      counter.innerText = target; // ensure it ends perfectly
-    }
-  };
-
-  requestAnimationFrame(update);
-};
-
-// Trigger animation when section is visible
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      observer.unobserve(entry.target);
-    }
+  const od = new Odometer({
+    el: el,
+    value: 0
   });
-}, { threshold: 0.5 });
 
-counters.forEach(counter => observer.observe(counter));
+  let ranAlready = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting && !ranAlready){
+        od.update(finalValue);   // starts animation ONLY when visible
+        ranAlready = true;
+        observer.unobserve(el);  // remove observe once done
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(el);
+
+});
+
 
 // slick slider code here
 $(document).ready(function(){
@@ -135,17 +119,90 @@ $(document).ready(function(){
 
 // testimonial video play/pause code here
 
-function togglePlay(button) {
-  const video = button.closest('.video-wrapper').querySelector('video');
-  if (video.paused) {
+
+const videos = document.querySelectorAll('.testimonial-video');
+const playButtons = document.querySelectorAll('.play-btn');
+
+// set bg blur poster for info box
+videos.forEach(v => {
+  const poster = v.getAttribute('poster');
+  const infoBox = v.closest('.testimonial-card').querySelector('.client-info');
+  infoBox.style.setProperty('--bg', `url("${poster}")`);
+});
+
+function resetToPoster(video){
+  video.pause();
+  video.currentTime = 0;
+  video.load(); // refresh like poster again
+}
+
+function togglePlay(button){
+  const card = button.closest('.testimonial-card');
+  const video = card.querySelector('video');
+  const icon = button.querySelector('i');
+
+  // pause others
+  videos.forEach(v => {
+    if(v !== video){
+      resetToPoster(v);
+      const other = v.closest('.testimonial-card').querySelector('.play-btn i');
+      other.classList.remove('fa-pause');
+      other.classList.add('fa-play');
+    }
+  });
+
+  // play / pause
+  if(video.paused){
     video.play();
-    button.querySelector('i').classList.remove('fa-play');
-    button.querySelector('i').classList.add('fa-pause');
-  } else {
-    video.pause();
-    button.querySelector('i').classList.remove('fa-pause');
-    button.querySelector('i').classList.add('fa-play');
+    icon.classList.remove('fa-play');
+    icon.classList.add('fa-pause');
+  }else{
+    resetToPoster(video);
+    icon.classList.remove('fa-pause');
+    icon.classList.add('fa-play');
   }
 }
+
+// auto reset on end
+videos.forEach(video => {
+  video.addEventListener('ended', () => {
+    resetToPoster(video);
+    const icon = video.closest('.testimonial-card').querySelector('.play-btn i');
+    icon.classList.remove('fa-pause');
+    icon.classList.add('fa-play');
+  });
+});
+
+
+// mobile menu animation code here
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+// Initially hide off-screen
+gsap.set(mobileMenu, { x: "-100%" });
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.add("hide"); // hide hamburger icon
+  
+  gsap.to(mobileMenu, { 
+    x: "0%", 
+    duration: 0.6, 
+    ease: "power3.out" 
+  });
+});
+
+closeMenu.addEventListener("click", () => {
+  gsap.to(mobileMenu, { 
+    x: "-100%", 
+    duration: 0.6, 
+    ease: "power3.in", 
+    onComplete: () => {
+      menuToggle.classList.remove("hide"); // show hamburger icon again
+    }
+  });
+});
+
+
 
 
